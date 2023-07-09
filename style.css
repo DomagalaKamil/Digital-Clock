@@ -1,0 +1,53 @@
+body {
+  background: radial-gradient(ellipse at center, #0a2e38 0%, #000 35%);
+  margin: 0;
+  padding: 0;
+}
+
+#clock {
+  font-family: 'Share Tech Mono', monospace;
+  text-align: center;
+  color: #daf6ff;
+  text-shadow: 0 0 20px rgba(10, 175, 230, 1), 0 0 20px rgba(10, 175, 230, 0);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 1; /* Ensure the clock appears above the background */
+}
+
+.date {
+  letter-spacing: 0.1em;
+  font-size: 24px;
+  margin-bottom: 10px; /* Adjust the margin to reduce spacing between date and time */
+}
+
+.time {
+  letter-spacing: 0.05em;
+  font-size: 80px;
+  padding: 5px 0;
+  margin-top: 0; /* Remove the top margin to reduce spacing between date and time */
+}
+
+.text {
+  letter-spacing: 0.1em;
+  font-size: 12px;
+  padding: 20px 0 0;
+}
+
+/* Additional styles for consistent rendering */
+html {
+  height: 100%;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, #0a2e38 0%, #000 35%);
+  z-index: -1; /* Place the background behind other elements */
+}
